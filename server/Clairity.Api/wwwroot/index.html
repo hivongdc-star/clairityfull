@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Clairity</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="topbar">
+      <div class="brand">
+        <div style="width:34px;height:34px;border-radius:14px;background:linear-gradient(135deg,rgba(124,92,255,.9),rgba(0,212,255,.8));box-shadow:0 10px 22px rgba(0,0,0,.35)"></div>
+        <div>
+          <div style="font-size:16px;">Clairity</div>
+          <div class="muted small" id="subtitle">Relationship clarity • reply assistant</div>
+        </div>
+        <span class="badge" id="modeBadge">EN</span>
+      </div>
+
+      <div class="nav" id="nav"></div>
+
+      <div class="right">
+        <span class="pill" id="userPill">Guest</span>
+        <button class="btn ghost" id="logoutBtn" style="display:none">Logout</button>
+      </div>
+    </div>
+
+    <div id="app"></div>
+    <div class="footer" id="footer"></div>
+  </div>
+
+  <div class="modalBack" id="modalBack">
+    <div class="modal" id="modal">
+      <h3 id="modalTitle">Setup</h3>
+      <div id="modalBody"></div>
+      <div class="actions" id="modalActions"></div>
+    </div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
