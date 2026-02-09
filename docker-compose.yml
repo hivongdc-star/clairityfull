@@ -1,0 +1,26 @@
+services:
+  api:
+    build:
+      context: ./server
+    env_file:
+      - ./server/.env
+    restart: unless-stopped
+    networks:
+      - clairity
+    expose:
+      - "5000"
+
+  web:
+    build:
+      context: .
+      dockerfile: ./web/Dockerfile
+    depends_on:
+      - api
+    restart: unless-stopped
+    ports:
+      - "4000:4000"
+    networks:
+      - clairity
+
+networks:
+  clairity: {}
