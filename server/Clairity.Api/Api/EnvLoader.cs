@@ -19,7 +19,7 @@ public static class EnvLoader
             var val = line.Substring(idx + 1).Trim();
 
             // strip quotes
-            if ((val.StartsWith('"') && val.EndsWith('"')) || (val.StartsWith(''') && val.EndsWith(''')))
+            if ((val.StartsWith('"') && val.EndsWith('"')) || (val.StartsWith("'") && val.EndsWith("'")))
                 val = val.Substring(1, val.Length - 2);
 
             // don't overwrite real environment variables
